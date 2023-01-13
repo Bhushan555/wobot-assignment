@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wobot assignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="./assets/images/wobot-logo_blue.png" alt="">
+        </figure>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="content">
+                <div class="header-wrap">
+                    <figure>
+                        <img src="./assets/images/Solid_lines.png" alt="">
+                    </figure>
+                    <h3>It’s a delight to have you onboard</h3>
+                    <p>Help us know you better. <br> (This is how we optimize Wobot as per your business needs)</p>
+                </div>
+                <div class="form-wrap">
+                    <form action="#">
+                        <div class="form-field">
+                            <label for="company_name">Company name</label>
+                            <input type="text" placeholder="e.g. Example Inc">
+                        </div>
+                        <div class="form-field">
+                            <label for="industry">Industry</label>
+                            <select id="industry" name="industry_name" placeholder="d">
+                                <option class="select-placeholder" value="" disabled selected hidden>Select</option>
+                                <option value="information-technology">Information-technology</option>
+                                <option value="clothing">Clothing</option>
+                                <option value="health-care">Health Care</option>
+                                <option value="construction">Construction</option>
+                              </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="industry">Industry</label>
+                            <div class="checkbox">
+                            <label class="select-labels" for="1to20">
+                            <input type="checkbox" value="1to20" />1-20
+                            </label>
+                            <label class="select-labels" for="21to50">
+                            <input type="checkbox" value="21to50" />21-50
+                            </label>
+                            <label class="select-labels selected" for="51to100">
+                            <input type="checkbox"  value="51to100" />51-200
+                            </label>
+                            <label class="select-labels" for="201to500">
+                            <input type="checkbox"  value="201to500" />201-500
+                            </label>
+                            <label class="select-labels" for="500+">
+                            <input type="checkbox"  value="500+" />500+
+                            </label>
+                            
+                            </div>
+                        </div>
+                        <button>Get Started</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <a href="#">Terms of use  |  Privacy policy </a>
+        </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

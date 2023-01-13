@@ -1,0 +1,215 @@
+@import '_variables';
+@import '_bootstrap';
+
+// mixins
+@mixin extra-small {
+    @media (min-width: $extra-small) {
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media (min-width: $small-mobile) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin small-tab {
+    @media (min-width: $small-tab) {
+        @content;
+    }
+}
+
+@mixin big-tab {
+    @media (min-width: $big-tab) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin mid-desktop {
+    @media (min-width: $mid-desktop) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media (min-width: $large-desktop) {
+        @content;
+    }
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url("../images/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100wh;
+    box-sizing: border-box;
+}
+header{
+    
+    figure{
+        width: 100px;
+        height: 36.02px;
+        margin: 15px;
+        @include mobile(){  
+            width: 160px;
+            margin: 30px;
+        }
+        img{
+            height: auto;
+            width: 100%;
+        }
+    }
+}
+main{
+    width: 100%;
+    margin-bottom: 60px;
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .content{
+            box-shadow: 4px 4px 20px rgba(157, 157, 157, 0.12);
+            border-radius: 15px;
+            background-color: $white-color;
+            width: 280px;
+            padding: 40px 20px;
+            @include mobile(){
+                width: 400px;
+                padding: 30px 60px;
+            }
+            .header-wrap{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding-bottom: 20px;
+                figure{
+                    width: 30px;
+                    height: 30px;
+                    @include mobile(){
+                        width: 51px;
+                        height: 48px;
+                    }
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                h3{
+                    color: $heading-color;
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 30px;
+                    text-align: center;
+                    width: 280px;
+                    margin:0;
+                    @include mobile(){
+                        font-size: 26px;
+                    }
+                }
+                p{
+                    color: $text-color;
+                    font-size: 14px;
+                    line-height: 18px;
+                    text-align: center;
+
+                }   
+            }
+            .form-wrap{
+                form{
+                    .form-field{
+                        padding-bottom: 24px;
+                        display: flex;
+                        flex-direction: column;
+                        label{
+                            font-family: 'Inter', sans-serif;
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: $text-color;
+                            margin-bottom:10px;
+                        }
+                        input,select{
+                            border: 1px solid #CED4DA;
+                            padding: 0px 9px;
+                            height: 36px;
+                            color: $text-color;
+                            .select-placeholder{
+                                color: $text-color;
+                            }
+                            &:focus-visible{
+                                border: 1px solid $primary-color;
+                                outline: none;
+                            }
+                        }
+                        .checkbox{
+                            input{
+                                opacity: 0;
+                                width: 0;
+                                height: 0;
+                            }
+                            label{
+                                background-color: #f0f0f0;
+                                color: $text-color;
+                                font-size: 14px;
+                                padding: 4px 10px 4px 6px;
+                                margin-right: 8px;
+                                cursor: pointer;
+                                transition: ease-in 0.1s;
+                               display: inline-block;
+                                &.selected{
+                                    background-color: $primary-color;
+                                    color: $white-color;
+                                }
+                            }
+                        }
+                    }
+                    button{
+                        margin-top: 10px;
+                        @include mobile(){
+                            margin-top: 20px;
+                        }
+                        width: 100%;
+                        background-color: $primary-color;
+                        border: none;
+                        color: $white-color;
+                        height: 36px;
+                        border-radius: 5px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+footer{
+    div{
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        a{
+            margin-bottom: 20px;
+            display: inline-block;
+            color: $text-color;
+            text-decoration: none;
+            &:hover{
+                color: $heading-color;
+            }
+        }
+    }
+}
